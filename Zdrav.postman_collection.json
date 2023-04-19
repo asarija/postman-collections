@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "7fa06ec9-0990-4d98-b588-d841db13c753",
+		"name": "Zdrav",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25229039"
+	},
+	"item": [
+		{
+			"name": "Departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/{{basePath}}/departments",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{basePath}}",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Personal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nPol",
+							"value": "2151110892000381",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "birthday",
+							"value": "{{myBirthday}}",
+							"type": "text"
+						},
+						{
+							"key": "auth",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "pol",
+							"value": "{{myPolis}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://{{host}}/{{basePath}}/personal",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{basePath}}",
+						"personal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Doctors/{doctorId}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/{{basePath}}/doctors/c971916c-3c5d-4e66-8004-ede3ba1ee5785e9bc4be-58d7-42d0-a698-85c70a8b2156?day=04.04.2023",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{basePath}}",
+						"doctors",
+						"c971916c-3c5d-4e66-8004-ede3ba1ee5785e9bc4be-58d7-42d0-a698-85c70a8b2156"
+					],
+					"query": [
+						{
+							"key": "day",
+							"value": "04.04.2023"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lpu_code",
+							"value": "5501013",
+							"type": "text"
+						},
+						{
+							"key": "doctor_id",
+							"value": "c971916c-3c5d-4e66-8004-ede3ba1ee5785e9bc4be-58d7-42d0-a698-85c70a8b2156",
+							"type": "text"
+						},
+						{
+							"key": "date_visit",
+							"value": "04.04.2023",
+							"type": "text"
+						},
+						{
+							"key": "time_visit",
+							"value": "11:30",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{myEmail}}",
+							"type": "text"
+						},
+						{
+							"key": "email_confirm_agree",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "{{myPhone}}",
+							"type": "text"
+						},
+						{
+							"key": "departmentId",
+							"value": "39",
+							"type": "text"
+						},
+						{
+							"key": "lpuGuid",
+							"value": "c971916c-3c5d-4e66-8004-ede3ba1ee578",
+							"type": "text"
+						},
+						{
+							"key": "timetableGuid",
+							"value": "91c22689-7353-47a8-9a5c-622c49c57761",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://{{host}}/{{basePath}}/doctors/entry/create",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{basePath}}",
+						"doctors",
+						"entry",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
